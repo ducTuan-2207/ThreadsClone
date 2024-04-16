@@ -13,6 +13,7 @@
 		225675752BCD86540095C19C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225675742BCD86540095C19C /* Preview Assets.xcassets */; };
 		225675852BCDADAC0095C19C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225675842BCDADAC0095C19C /* LoginView.swift */; };
 		225675872BCDB39B0095C19C /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225675862BCDB39B0095C19C /* RegistrationView.swift */; };
+		2256758A2BCE67100095C19C /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225675892BCE67100095C19C /* TextFieldModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		225675742BCD86540095C19C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		225675842BCDADAC0095C19C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		225675862BCDB39B0095C19C /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		225675892BCE67100095C19C /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		2256757C2BCD9CED0095C19C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				225675882BCE66DC0095C19C /* ViewModilfiers */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -143,6 +146,14 @@
 				225675862BCDB39B0095C19C /* RegistrationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		225675882BCE66DC0095C19C /* ViewModilfiers */ = {
+			isa = PBXGroup;
+			children = (
+				225675892BCE67100095C19C /* TextFieldModifiers.swift */,
+			);
+			path = ViewModilfiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 				225675852BCDADAC0095C19C /* LoginView.swift in Sources */,
 				225675702BCD86510095C19C /* ContentView.swift in Sources */,
 				2256756E2BCD86510095C19C /* ThreadsCloneApp.swift in Sources */,
+				2256758A2BCE67100095C19C /* TextFieldModifiers.swift in Sources */,
 				225675872BCDB39B0095C19C /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

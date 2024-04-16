@@ -21,18 +21,10 @@ struct LoginView: View {
                     .padding()
                 VStack {
                     TextField("Enter your email", text: $email)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemGray6))
-                        .cornerRadius(10)
-                        .padding(.horizontal, 24)
-                    
+                        .autocapitalization(.none)//khong tu dong viet hoa chu cai dau
+                        .modifier(TextFieldModifier())
                     TextField("Enter your password", text: $pass)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemGray6))
-                        .cornerRadius(10)
-                        .padding(.horizontal, 24)
+                        .modifier(TextFieldModifier())
                 }
                 NavigationLink {
                     Text("Forgot password?")
@@ -61,7 +53,7 @@ struct LoginView: View {
                 Spacer()
                 Divider()
                 NavigationLink {
-                    Text("Registration View")
+                    RegistrationView()
                 } label: {
                     HStack(spacing: 3) {
                         Text("Don't have an account?")
