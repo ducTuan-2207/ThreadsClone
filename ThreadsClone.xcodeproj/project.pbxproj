@@ -14,6 +14,8 @@
 		225675852BCDADAC0095C19C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225675842BCDADAC0095C19C /* LoginView.swift */; };
 		225675872BCDB39B0095C19C /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225675862BCDB39B0095C19C /* RegistrationView.swift */; };
 		2256758A2BCE67100095C19C /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225675892BCE67100095C19C /* TextFieldModifiers.swift */; };
+		2256758D2BCE81210095C19C /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256758C2BCE81210095C19C /* TabView.swift */; };
+		225675912BCEFAEA0095C19C /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225675902BCEFAEA0095C19C /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		225675842BCDADAC0095C19C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		225675862BCDB39B0095C19C /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		225675892BCE67100095C19C /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
+		2256758C2BCE81210095C19C /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		225675902BCEFAEA0095C19C /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 		225675802BCD9CFD0095C19C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2256758E2BCEFAD00095C19C /* Feed */,
+				2256758B2BCE80F90095C19C /* TabBar */,
 				225675812BCDABF50095C19C /* Authentication */,
 				225675822BCDAC080095C19C /* Root */,
 			);
@@ -154,6 +160,30 @@
 				225675892BCE67100095C19C /* TextFieldModifiers.swift */,
 			);
 			path = ViewModilfiers;
+			sourceTree = "<group>";
+		};
+		2256758B2BCE80F90095C19C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2256758C2BCE81210095C19C /* TabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		2256758E2BCEFAD00095C19C /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				2256758F2BCEFADA0095C19C /* View */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		2256758F2BCEFADA0095C19C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				225675902BCEFAEA0095C19C /* FeedView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,10 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225675912BCEFAEA0095C19C /* FeedView.swift in Sources */,
 				225675852BCDADAC0095C19C /* LoginView.swift in Sources */,
 				225675702BCD86510095C19C /* ContentView.swift in Sources */,
 				2256756E2BCD86510095C19C /* ThreadsCloneApp.swift in Sources */,
 				2256758A2BCE67100095C19C /* TextFieldModifiers.swift in Sources */,
+				2256758D2BCE81210095C19C /* TabView.swift in Sources */,
 				225675872BCDB39B0095C19C /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
