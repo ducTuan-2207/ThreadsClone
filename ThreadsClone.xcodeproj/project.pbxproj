@@ -131,13 +131,13 @@
 		225675802BCD9CFD0095C19C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				2256759E2BCEFC330095C19C /* Profile */,
 				2256759A2BCEFC110095C19C /* Activity */,
-				225675962BCEFBE40095C19C /* CreateView */,
-				225675922BCEFB9B0095C19C /* Explore */,
-				2256758E2BCEFAD00095C19C /* Feed */,
-				2256758B2BCE80F90095C19C /* TabBar */,
 				225675812BCDABF50095C19C /* Authentication */,
+				225675962BCEFBE40095C19C /* CreateView */,
+				2256759E2BCEFC330095C19C /* Profile */,
+				2256758E2BCEFAD00095C19C /* Feed */,
+				225675922BCEFB9B0095C19C /* Explore */,
+				2256758B2BCE80F90095C19C /* TabBar */,
 				225675822BCDAC080095C19C /* Root */,
 			);
 			path = Core;
@@ -147,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				225675832BCDAD910095C19C /* Views */,
+				228B098E2BCFD04500ECBCE1 /* Components */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -263,6 +264,13 @@
 				225675A02BCEFC4E0095C19C /* ProfileView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		228B098E2BCFD04500ECBCE1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
