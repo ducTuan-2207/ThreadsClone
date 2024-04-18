@@ -21,6 +21,9 @@
 		2256759D2BCEFC2E0095C19C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256759C2BCEFC2E0095C19C /* ActivityView.swift */; };
 		225675A12BCEFC4E0095C19C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225675A02BCEFC4E0095C19C /* ProfileView.swift */; };
 		225675A32BCEFDA10095C19C /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225675A22BCEFDA10095C19C /* ThreadCell.swift */; };
+		228B09902BCFD24F00ECBCE1 /* CirculaProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B098F2BCFD24F00ECBCE1 /* CirculaProfileImageView.swift */; };
+		228B09922BCFD3FD00ECBCE1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B09912BCFD3FD00ECBCE1 /* UserCell.swift */; };
+		228B09952BD0253C00ECBCE1 /* ProfileFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B09942BD0253C00ECBCE1 /* ProfileFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		2256759C2BCEFC2E0095C19C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		225675A02BCEFC4E0095C19C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		225675A22BCEFDA10095C19C /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
+		228B098F2BCFD24F00ECBCE1 /* CirculaProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirculaProfileImageView.swift; sourceTree = "<group>"; };
+		228B09912BCFD3FD00ECBCE1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		228B09942BD0253C00ECBCE1 /* ProfileFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 			children = (
 				2256759A2BCEFC110095C19C /* Activity */,
 				225675812BCDABF50095C19C /* Authentication */,
+				228B098E2BCFD04500ECBCE1 /* Components */,
 				225675962BCEFBE40095C19C /* CreateView */,
 				2256759E2BCEFC330095C19C /* Profile */,
 				2256758E2BCEFAD00095C19C /* Feed */,
@@ -147,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				225675832BCDAD910095C19C /* Views */,
-				228B098E2BCFD04500ECBCE1 /* Components */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 		2256759E2BCEFC330095C19C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				228B09932BD0252C00ECBCE1 /* Model */,
 				2256759F2BCEFC3E0095C19C /* View */,
 			);
 			path = Profile;
@@ -269,8 +276,18 @@
 		228B098E2BCFD04500ECBCE1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				228B098F2BCFD24F00ECBCE1 /* CirculaProfileImageView.swift */,
+				228B09912BCFD3FD00ECBCE1 /* UserCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		228B09932BD0252C00ECBCE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				228B09942BD0253C00ECBCE1 /* ProfileFilter.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,9 +366,12 @@
 				225675A32BCEFDA10095C19C /* ThreadCell.swift in Sources */,
 				2256759D2BCEFC2E0095C19C /* ActivityView.swift in Sources */,
 				225675702BCD86510095C19C /* ContentView.swift in Sources */,
+				228B09922BCFD3FD00ECBCE1 /* UserCell.swift in Sources */,
 				2256756E2BCD86510095C19C /* ThreadsCloneApp.swift in Sources */,
 				2256758A2BCE67100095C19C /* TextFieldModifiers.swift in Sources */,
 				2256758D2BCE81210095C19C /* TabView.swift in Sources */,
+				228B09952BD0253C00ECBCE1 /* ProfileFilter.swift in Sources */,
+				228B09902BCFD24F00ECBCE1 /* CirculaProfileImageView.swift in Sources */,
 				225675952BCEFBBA0095C19C /* ExploreView.swift in Sources */,
 				225675A12BCEFC4E0095C19C /* ProfileView.swift in Sources */,
 				225675872BCDB39B0095C19C /* RegistrationView.swift in Sources */,
