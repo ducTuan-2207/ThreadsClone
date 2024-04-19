@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomTabView: View {
     @Binding var selectedTab: Int
+    @State private var showCreateView = false
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -30,11 +31,17 @@ struct CustomTabView: View {
                 .tag(1)
             CreateView()
                 .tabItem {
-                    Image(systemName: selectedTab == 2 ? "plus.fill" : "plus")
-                        .environment(\.symbolVariants, selectedTab == 2 ? .fill : .none)
-                    //Text("Upload")
+                    Button(action: {
+                        showCreateView = true
+                    }) {
+                        Image(systemName: selectedTab == 2 ? "plus.fill" : "plus")
+                            .environment(\.symbolVariants, selectedTab == 2 ? .fill : .none)
+                    }
                 }
-                .onAppear {selectedTab = 2}
+                .onAppear {
+                    selectedTab = 2
+                }
+
                 .tag(2)
             ActivityView()
                 .tabItem {
@@ -45,6 +52,7 @@ struct CustomTabView: View {
                 .onAppear {selectedTab = 3}
                 .tag(3)
             ProfileView()
+            
                 .tabItem {
                     Image(systemName: selectedTab == 4 ? "person.fill" : "person")
                         .environment(\.symbolVariants, selectedTab == 4 ? .fill : .none)
@@ -53,6 +61,16 @@ struct CustomTabView: View {
                 .onAppear {selectedTab = 4}
                 .tag(4)
         }
+        .onChange(of: selectedTab, perform: { newValue in
+                   if newValue == 2 {
+                       showCreateView = true
+                   }
+               })
+               .sheet(isPresented: $showCreateView, onDismiss: {
+                   selectedTab = 0 // Thiết lập selectedTab về 0 khi sheet đóng lại
+               }, content: {
+                   CreateView()
+               })
         .tint(.black)
     }
 }
