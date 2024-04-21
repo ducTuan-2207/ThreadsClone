@@ -1,14 +1,9 @@
-//
-//  LoginView.swift
-//  ThreadsClone
-//
-//  Created by macOS on 16/04/2024.
-//
-
 import SwiftUI
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
+    @State private var isLoggedIn: Bool = false // Thêm state để theo dõi trạng thái đăng nhập
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -20,7 +15,7 @@ struct LoginView: View {
                     .padding()
                 VStack {
                     TextField("Enter your email", text: $viewModel.email)
-                        .autocapitalization(.none)//khong tu dong viet hoa chu cai dau
+                        .autocapitalization(.none)
                         .modifier(TextFieldModifier())
                     TextField("Enter your password", text: $viewModel.password)
                         .modifier(TextFieldModifier())
@@ -36,21 +31,25 @@ struct LoginView: View {
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-//                .padding(.bottom)
                 
-                Button {
-                    Task {
-                        try await viewModel.login()
+                // Sử dụng NavigationLink để điều hướng khi ấn nút "Login"
+                NavigationLink(destination: FeedView(), isActive: $isLoggedIn) {
+                    Button {
+                        Task {
+                            try await viewModel.login()
+                            isLoggedIn = true // Đánh dấu là đã đăng nhập thành công
+                        }
+                    } label: {
+                        Text("Login")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .frame(width: 353, height: 44)
+                            .background(.black)
+                            .cornerRadius(8)
                     }
-                } label: {
-                    Text("Login")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(width: 353, height: 44)
-                        .background(.black)
-                        .cornerRadius(8)
                 }
+                
                 Spacer()
                 Divider()
                 NavigationLink {
@@ -59,7 +58,6 @@ struct LoginView: View {
                 } label: {
                     HStack(spacing: 3) {
                         Text("Don't have an account?")
-                        
                         Text("Sign up")
                             .fontWeight(.semibold)
                     }

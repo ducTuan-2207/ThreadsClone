@@ -33,7 +33,8 @@ class AuthService {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
-            print("DEBUG: created user\(result.user.uid)")
+//            print("DEBUG: created user\(result.user.uid)")
+            try await uploadUserData(withEmail: email, fullname: fullname, username: username, id: result.user.uid)
         } catch {
             print("DEBUG: Failed to create user error \(error.localizedDescription)")
         }
@@ -49,7 +50,9 @@ class AuthService {
                                 id: String)
     async throws {
         let user = User(id: id, fullname: fullname, email: email, username: username)
-        guard let userData = Firestore.
+        guard let userData = try? Firestore.Encoder().encode(user) else {return}
+        // try? nếu có lỗi trong quá trình thực thi thì swift sẽ trả về một giá trị nil thay vì ném ra một ngoại lệ
+        try await Firestore.firestore().collection("users").document(id).setData(userData)
         
     }
     
