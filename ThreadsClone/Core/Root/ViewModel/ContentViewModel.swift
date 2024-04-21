@@ -20,6 +20,9 @@ class contentViewModel: ObservableObject {
         
     }
     private func setupSubscribers() {
+        
+        
+//        AuthService().$userSession
         // Mỗi khi giá trị của AuthService.share.$userSession thay đổi, subscriber này sẽ nhận giá trị mới thông qua closure và gán nó cho thuộc tính userSession của lớp contentViewModel, đảm bảo rằng giá trị này được cập nhật và SwiftUI sẽ được thông báo về sự thay đổi
         AuthService.share.$userSession.sink { [weak self] userSession in
             self?.userSession = userSession
