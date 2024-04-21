@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestoreSwift
 
 class AuthService {
     
@@ -41,4 +42,15 @@ class AuthService {
         try? Auth.auth().signOut() // signs out on backend
         self.userSession = nil // this remove session locally and update and upadate routing
     }
+    @MainActor
+    private func uploadUserData(withEmail email: String ,
+                                fullname: String,
+                                username: String,
+                                id: String)
+    async throws {
+        let user = User(id: id, fullname: fullname, email: email, username: username)
+        guard let userData = Firestore.
+        
+    }
+    
 }
