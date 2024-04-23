@@ -226,6 +226,7 @@
 		2256758E2BCEFAD00095C19C /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				226C228E2BD7D93E00F16706 /* FeedViewModel */,
 				2256758F2BCEFADA0095C19C /* View */,
 			);
 			path = Feed;
@@ -305,6 +306,13 @@
 				225675A02BCEFC4E0095C19C /* ProfileView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		226C228E2BD7D93E00F16706 /* FeedViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FeedViewModel;
 			sourceTree = "<group>";
 		};
 		227E1A8B2BD581F800A730A5 /* ViewModel */ = {
