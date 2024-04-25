@@ -33,7 +33,7 @@ struct LoginView: View {
                 }
                 
                 // Sử dụng NavigationLink để điều hướng khi ấn nút "Login"
-                NavigationLink(destination: FeedView(), isActive: $isLoggedIn) {
+                NavigationLink(destination: CustomTabView(selectedTab: .constant(0)), isActive: $isLoggedIn) {
                     Button {
                         Task {
                             try await viewModel.login()
